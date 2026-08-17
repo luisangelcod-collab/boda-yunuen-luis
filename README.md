@@ -19,4 +19,4 @@ Para GitHub Pages: abre **Settings → Pages**, elige **Deploy from a branch**, 
 
 ## Fotografías
 
-Las nueve fotografías originales se conservan como JPEG en `assets/photos`. Cada una tiene versiones AVIF y WebP adaptativas para celular y computadora; el navegador carga automáticamente el tamaño más ligero que mantiene la nitidez necesaria.
+Las nueve fotografías originales se conservan como JPEG en `assets/photos`. Cada una tiene versiones AVIF adaptativas para celular y computadora; los navegadores compatibles cargan automáticamente el tamaño más ligero y los demás conservan el JPEG original como respaldo.
