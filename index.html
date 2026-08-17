@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe5">
+  <title>Yunuen & Luis | 14 de noviembre de 2026</title>
+  <meta name="description" content="Invitación de boda de Yunuen y Luis. Acompáñanos el 14 de noviembre de 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:title" content="Yunuen & Luis">
+  <meta property="og:description" content="Nos casamos el 14 de noviembre de 2026. Nos encantará celebrar contigo.">
+  <meta property="og:url" content="https://luisangelcod-collab.github.io/boda-yunuen-luis/">
+  <meta property="og:image" content="https://luisangelcod-collab.github.io/boda-yunuen-luis/assets/og.png">
+  <meta property="og:image:width" content="1728">
+  <meta property="og:image:height" content="910">
+  <meta property="og:image:alt" content="Yunuen y Luis, 14 de noviembre de 2026">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Yunuen & Luis">
+  <meta name="twitter:description" content="14 de noviembre de 2026">
+  <meta name="twitter:image" content="https://luisangelcod-collab.github.io/boda-yunuen-luis/assets/og.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#inicio" aria-label="Yunuen y Luis, inicio">Yunuen <span>&</span> Luis</a>
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      <a href="#historia">Nuestra historia</a><a href="#momentos">Momentos</a><a href="#horario">Horario</a><a href="#preguntas">Preguntas</a><a href="#reservacion">Reservación</a>
+    </nav>
+    <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Abrir menú">☰</button>
+  </header>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil" hidden>
+    <a href="#historia">Nuestra historia</a><a href="#momentos">Nuestros momentos</a><a href="#horario">Horario</a><a href="#preguntas">Preguntas frecuentes</a><a href="#reservacion">Confirmar asistencia</a>
+  </nav>
+
+  <main id="contenido">
+    <section class="hero" id="inicio" aria-labelledby="heroTitle">
+      <img class="hero-photo" src="assets/yunuen-luis-02.webp" alt="Yunuen y Luis juntos frente a una camioneta clásica" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Nos casamos</p>
+        <h1 id="heroTitle">Yunuen <span>&</span> Luis</h1>
+        <p class="hero-date">14 · NOVIEMBRE · 2026</p>
+        <p class="hero-message">Con mucha alegría te invitamos a celebrar nuestro gran día.</p>
+        <p class="guest-greeting" id="guestGreeting" hidden></p>
+        <button class="button button-light" type="button" data-open-rsvp>Confirmar asistencia</button>
+      </div>
+      <a class="scroll-cue" href="#historia" aria-label="Continuar a nuestra historia">Descubre nuestra historia <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section class="story section" id="historia">
+      <div class="narrow reveal">
+        <p class="eyebrow ink">Nuestra historia</p>
+        <h2>De la mano,<br><em>para siempre</em></h2>
+        <div class="flourish" aria-hidden="true"><span></span>◆<span></span></div>
+        <p class="story-copy">Desde que nuestros caminos se cruzaron, supimos que había algo especial. Entre risas, aventuras y momentos que guardaremos por siempre, construimos un amor que hoy nos trae hasta aquí: listos para comenzar nuestro capítulo más importante. Gracias por ser parte de esta historia.</p>
+      </div>
+    </section>
+
+    <section class="countdown-section section" aria-labelledby="countdownTitle">
+      <div class="countdown-card reveal">
+        <p class="eyebrow ink">14 · 11 · 2026</p><h2 id="countdownTitle">Falta muy poco</h2>
+        <div class="countdown" aria-live="polite" aria-label="Cuenta regresiva para la boda">
+          <div><strong id="days">--</strong><span>Días</span></div><div><strong id="hours">--</strong><span>Horas</span></div><div><strong id="minutes">--</strong><span>Minutos</span></div><div><strong id="seconds">--</strong><span>Segundos</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="moments section" id="momentos" aria-labelledby="momentsTitle">
+      <div class="section-heading reveal"><p class="eyebrow ink">Recuerdos que guardamos</p><h2 id="momentsTitle">Nuestros momentos</h2><div class="flourish" aria-hidden="true"><span></span>◆<span></span></div></div>
+      <div class="carousel reveal" id="carousel" aria-roledescription="carrusel" aria-label="Fotografías de Yunuen y Luis">
+        <div class="slides" id="slides" aria-live="polite"></div>
+        <button class="carousel-button previous" id="previousPhoto" type="button" aria-label="Fotografía anterior">‹</button>
+        <button class="carousel-button next" id="nextPhoto" type="button" aria-label="Fotografía siguiente">›</button>
+      </div>
+      <div class="dots" id="carouselDots" aria-label="Elegir fotografía"></div>
+      <p class="carousel-note">Las fotografías cambian automáticamente cada 7 segundos.</p>
+    </section>
+
+    <section class="schedule section" id="horario" aria-labelledby="scheduleTitle">
+      <div class="section-heading reveal"><p class="eyebrow ink">El gran día</p><h2 id="scheduleTitle">Horario y lugares</h2><div class="flourish" aria-hidden="true"><span></span>◆<span></span></div></div>
+      <div class="event-grid">
+        <article class="event-card reveal">
+          <div class="event-icon" aria-hidden="true">✦</div><p class="event-label">Ceremonia religiosa</p><h3>Templo del Santo Cristo Milagroso</h3><p>14 de noviembre de 2026<br><span>Hora por confirmar</span></p>
+          <a class="button button-outline" href="https://maps.app.goo.gl/dY969Qh3VyfRDX3TA" target="_blank" rel="noopener noreferrer">Cómo llegar</a>
+        </article>
+        <article class="event-card reveal">
+          <div class="event-icon" aria-hidden="true">◇</div><p class="event-label">Recepción</p><h3>Salón Cacirpe</h3><p>14 de noviembre de 2026<br><span>Hora por confirmar</span></p>
+          <a class="button button-outline" href="https://maps.app.goo.gl/WmAsAaYpF9cNuDCe6" target="_blank" rel="noopener noreferrer">Cómo llegar</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq section" id="preguntas" aria-labelledby="faqTitle">
+      <div class="section-heading reveal"><p class="eyebrow ink">Todo lo que necesitas saber</p><h2 id="faqTitle">Preguntas frecuentes</h2><div class="flourish" aria-hidden="true"><span></span>◆<span></span></div></div>
+      <div class="faq-list reveal">
+        <details><summary>¿Cuál es el código de vestimenta?</summary><p>Lo compartiremos junto con los detalles finales de la invitación.</p></details>
+        <details><summary>¿A qué hora debo llegar?</summary><p>Te recomendamos llegar con anticipación. La hora exacta aparecerá cuando confirmemos el horario de la ceremonia.</p></details>
+        <details><summary>¿Pueden asistir niños?</summary><p>Esta información se indicará de forma individual en la invitación de cada familia.</p></details>
+        <details><summary>¿Habrá estacionamiento?</summary><p>Agregaremos aquí las indicaciones de acceso y estacionamiento.</p></details>
+      </div>
+    </section>
+
+    <section class="rsvp section" id="reservacion" aria-labelledby="rsvpTitle">
+      <div class="narrow reveal"><p class="eyebrow">Queremos celebrar contigo</p><h2 id="rsvpTitle">Reservación</h2><div class="flourish light" aria-hidden="true"><span></span>◆<span></span></div><p>Tu confirmación es muy importante para nosotros. Cuéntanos si podrás acompañarnos en este día tan especial.</p><button class="button button-light" type="button" data-open-rsvp>Confirmar asistencia</button></div>
+    </section>
+
+    <section class="save-date section"><p class="eyebrow ink">Yunuen & Luis</p><h2>Guarda la fecha</h2><div class="flourish" aria-hidden="true"><span></span>◆<span></span></div><p class="save-date-value">14 de noviembre de 2026</p></section>
+  </main>
+
+  <footer>Con amor, Yunuen & Luis · 14 de noviembre de 2026</footer>
+
+  <dialog class="rsvp-dialog" id="rsvpDialog" aria-labelledby="dialogTitle">
+    <button class="dialog-close" id="closeRsvp" type="button" aria-label="Cerrar formulario">×</button>
+    <p class="eyebrow ink">Nos encantará saber de ti</p><h2 id="dialogTitle">Confirmar asistencia</h2><p class="dialog-intro">Tu respuesta llegará directamente a Yunuen y Luis.</p>
+    <form id="rsvpForm">
+      <label for="guestName">Nombre completo</label><input id="guestName" name="guest_name" maxlength="100" autocomplete="name" required>
+      <label for="attendance">¿Podrás acompañarnos?</label><select id="attendance" name="attendance" required><option value="si">Sí, asistiré</option><option value="no">No podré asistir</option></select>
+      <label for="guestCount">Número de asistentes</label><input id="guestCount" name="guest_count" type="number" min="1" max="20" value="1" inputmode="numeric" required>
+      <label for="phone">Teléfono <span>(opcional)</span></label><input id="phone" name="phone" type="tel" maxlength="40" autocomplete="tel">
+      <label for="message">Mensaje para los novios <span>(opcional)</span></label><textarea id="message" name="message" rows="3" maxlength="600"></textarea>
+      <input id="invitation" name="invitation" type="hidden" value="Invitación general">
+      <div class="honeypot" aria-hidden="true"><label for="website">No completar</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+      <button class="button button-dark submit-button" id="submitRsvp" type="submit">Enviar confirmación</button>
+      <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+    </form>
+  </dialog>
+</body>
+</html>
