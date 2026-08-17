@@ -5,7 +5,7 @@ Invitación digital para el 14 de noviembre de 2026.
 ## Incluye
 
 - Diseño adaptable a celular y computadora.
-- Carrusel de seis fotografías con avance automático cada 7 segundos, controles y gesto táctil.
+- Carrusel de nueve fotografías con avance automático cada 7 segundos, controles y gesto táctil.
 - Cuenta regresiva, ubicaciones y preguntas frecuentes.
 - Formulario de confirmación conectado a la base de datos existente.
 - Invitaciones personalizadas mediante `?invitado=Familia%20García`.
@@ -19,4 +19,4 @@ Para GitHub Pages: abre **Settings → Pages**, elige **Deploy from a branch**, 
 
 ## Fotografías
 
-Las seis imágenes incluidas son las copias WebP recuperadas de la publicación anterior. Para máxima nitidez, sustituye cada archivo de `assets/yunuen-luis-01.webp` a `assets/yunuen-luis-06.webp` por la fotografía original correspondiente, conservando el mismo nombre.
+Las nueve fotografías originales se conservan como JPEG en `assets/photos`. Cada una tiene versiones AVIF y WebP adaptativas para celular y computadora; el navegador carga automáticamente el tamaño más ligero que mantiene la nitidez necesaria.

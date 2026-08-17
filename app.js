@@ -1,7 +1,17 @@
 const WEDDING_DATE=new Date("2026-11-14T00:00:00-06:00");
 const RSVP_ENDPOINT="https://fzkxoyamxmeddfxmqbmz.supabase.co/rest/v1/wedding_rsvp";
 const SUPABASE_PUBLISHABLE_KEY="sb_publishable_511lJk84mU8RKS3J-c7AUw_ai2O8gB7";
-const PHOTOS=[1,2,3,4,5,6].map(number=>({src:`assets/yunuen-luis-${String(number).padStart(2,"0")}.webp`,alt:`Yunuen y Luis, fotografía ${number} de 6`}));
+const PHOTOS=[
+  {number:1,width:1066,height:1600,small:640},
+  {number:2,width:1066,height:1600,small:640},
+  {number:3,width:1066,height:1600,small:640},
+  {number:4,width:1066,height:1600,small:640},
+  {number:5,width:1066,height:1600,small:640},
+  {number:6,width:1600,height:1066,small:960,orientation:"landscape"},
+  {number:7,width:1066,height:1600,small:640},
+  {number:8,width:1066,height:1600,small:640},
+  {number:9,width:1066,height:1600,small:640},
+].map(photo=>{const stem=`assets/photos/yunuen-luis-${String(photo.number).padStart(2,"0")}`;return{...photo,src:`${stem}.jpeg`,avif:`${stem}-${photo.small}.avif ${photo.small}w, ${stem}-${photo.width}.avif ${photo.width}w`,webp:`${stem}-${photo.small}.webp ${photo.small}w, ${stem}-${photo.width}.webp ${photo.width}w`,alt:`Yunuen y Luis, fotografía ${photo.number} de 9`}});
 const prefersReducedMotion=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const siteHeader=document.querySelector("#siteHeader");
 const menuButton=document.querySelector("#menuButton");
@@ -24,7 +34,7 @@ const slides=document.querySelector("#slides");
 const dots=document.querySelector("#carouselDots");
 const carousel=document.querySelector("#carousel");
 let currentPhoto=0,carouselTimer,touchStartX=0;
-PHOTOS.forEach((photo,index)=>{const slide=document.createElement("figure");slide.className="slide";slide.setAttribute("aria-label",`${index+1} de ${PHOTOS.length}`);slide.setAttribute("aria-hidden",index===0?"false":"true");const image=document.createElement("img");image.src=photo.src;image.alt=photo.alt;image.loading=index===0?"eager":"lazy";image.decoding="async";slide.append(image);slides.append(slide);const dot=document.createElement("button");dot.className=`dot${index===0?" active":""}`;dot.type="button";dot.setAttribute("aria-label",`Mostrar fotografía ${index+1}`);dot.setAttribute("aria-current",index===0?"true":"false");dot.addEventListener("click",()=>showPhoto(index,true));dots.append(dot)});
+PHOTOS.forEach((photo,index)=>{const slide=document.createElement("figure");slide.className=`slide${photo.orientation==="landscape"?" slide--landscape":""}`;slide.setAttribute("aria-label",`${index+1} de ${PHOTOS.length}`);slide.setAttribute("aria-hidden",index===0?"false":"true");const picture=document.createElement("picture");const avif=document.createElement("source");avif.type="image/avif";avif.srcset=photo.avif;avif.sizes="(max-width: 560px) 100vw, (max-width: 820px) calc(100vw - 12px), 690px";const webp=document.createElement("source");webp.type="image/webp";webp.srcset=photo.webp;webp.sizes=avif.sizes;const image=document.createElement("img");image.src=photo.src;image.alt=photo.alt;image.width=photo.width;image.height=photo.height;image.loading="lazy";image.decoding="async";picture.append(avif,webp,image);slide.append(picture);slides.append(slide);const dot=document.createElement("button");dot.className=`dot${index===0?" active":""}`;dot.type="button";dot.setAttribute("aria-label",`Mostrar fotografía ${index+1}`);dot.setAttribute("aria-current",index===0?"true":"false");dot.addEventListener("click",()=>showPhoto(index,true));dots.append(dot)});
 function showPhoto(index,restart=false){currentPhoto=(index+PHOTOS.length)%PHOTOS.length;slides.style.transform=`translateX(-${currentPhoto*100}%)`;[...slides.children].forEach((slide,i)=>slide.setAttribute("aria-hidden",String(i!==currentPhoto)));[...dots.children].forEach((dot,i)=>{const active=i===currentPhoto;dot.classList.toggle("active",active);dot.setAttribute("aria-current",String(active))});if(restart)restartCarousel()}
 function startCarousel(){if(prefersReducedMotion)return;clearInterval(carouselTimer);carouselTimer=setInterval(()=>showPhoto(currentPhoto+1),7000)}
 function pauseCarousel(){clearInterval(carouselTimer)}
