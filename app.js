@@ -12,7 +12,13 @@ const PHOTOS=[
   {number:7,width:1066,height:1600,small:640},
   {number:8,width:1066,height:1600,small:640},
   {number:9,width:1066,height:1600,small:640},
-].map(photo=>{const stem=`assets/photos/yunuen-luis-${String(photo.number).padStart(2,"0")}`;return{...photo,src:`${stem}.jpeg`,avif:`${stem}-${photo.small}.avif ${photo.small}w, ${stem}-${photo.width}.avif ${photo.width}w`,alt:`Yunuen y Luis, fotografía ${photo.number} de 9`}});
+  {number:10,width:852,height:1280,small:640},
+  {number:11,width:853,height:1280,small:640},
+  {number:12,width:853,height:1280,small:640},
+  {number:13,width:853,height:1280,small:640},
+  {number:14,width:853,height:1280,small:640},
+  {number:15,width:853,height:1280,small:640},
+].map(photo=>{const stem=`assets/photos/yunuen-luis-${String(photo.number).padStart(2,"0")}`;return{...photo,src:`${stem}.jpeg`,avif:`${stem}-${photo.small}.avif ${photo.small}w, ${stem}-${photo.width}.avif ${photo.width}w`,alt:`Yunuen y Luis, fotografía ${photo.number} de 15`}});
 const prefersReducedMotion=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const siteHeader=document.querySelector("#siteHeader");
 const menuButton=document.querySelector("#menuButton");
