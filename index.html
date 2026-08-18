@@ -22,8 +22,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js?v=20260817-3" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260817-1">
+  <script src="app.js?v=20260817-4" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Ir al contenido</a>
@@ -47,6 +47,7 @@
       </picture>
       <div class="hero-shade"></div>
       <div class="hero-copy">
+        <div class="hero-monogram" aria-hidden="true"><img src="assets/monograma-yl.jpg" alt="" width="794" height="777" fetchpriority="high"></div>
         <p class="eyebrow">Nos casamos</p>
         <h1 id="heroTitle">Yunuen <span>&</span> Luis</h1>
         <p class="hero-date">14 · NOVIEMBRE · 2026</p>
@@ -120,11 +121,12 @@
 
   <dialog class="rsvp-dialog" id="rsvpDialog" aria-labelledby="dialogTitle">
     <button class="dialog-close" id="closeRsvp" type="button" aria-label="Cerrar formulario">×</button>
+    <img class="dialog-monogram" src="assets/monograma-yl.jpg" alt="Monograma de Yunuen y Luis" width="794" height="777">
     <p class="eyebrow ink">Nos encantará saber de ti</p><h2 id="dialogTitle">Confirmar asistencia</h2><p class="dialog-intro">Tu respuesta llegará directamente a Yunuen y Luis. Confirma a más tardar el 25 de octubre de 2026.</p>
     <form id="rsvpForm">
-      <label for="guestName">Nombre completo</label><input id="guestName" name="guest_name" maxlength="100" autocomplete="name" required>
       <label for="attendance">¿Podrás acompañarnos?</label><select id="attendance" name="attendance" required><option value="si">Sí, asistiré</option><option value="no">No podré asistir</option></select>
       <label for="guestCount">Número de asistentes</label><input id="guestCount" name="guest_count" type="number" min="1" max="20" value="1" inputmode="numeric" required>
+      <label id="guestNameLabel" for="guestName">Nombres completos de quienes asistirán</label><textarea id="guestName" name="guest_name" rows="3" maxlength="600" autocomplete="name" placeholder="Escribe un nombre por línea" required></textarea>
       <label for="phone">Teléfono <span>(opcional)</span></label><input id="phone" name="phone" type="tel" maxlength="40" autocomplete="tel">
       <label for="message">Mensaje para los novios <span>(opcional)</span></label><textarea id="message" name="message" rows="3" maxlength="600"></textarea>
       <input id="invitation" name="invitation" type="hidden" value="Invitación general">
