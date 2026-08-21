@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5ede2">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>Confirmaciones privadas | Yunuen & Luis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css?v=20260821-1">
+  <script src="admin.js?v=20260821-1" defer></script>
+</head>
+<body>
+  <main>
+    <section class="login-card" id="loginView" aria-labelledby="loginTitle">
+      <img src="assets/monograma-yl-transparente.png" alt="Monograma de Yunuen y Luis" width="794" height="777">
+      <p class="eyebrow">Panel privado</p>
+      <h1 id="loginTitle">Confirmaciones</h1>
+      <p>Este apartado es exclusivo para Yunuen y Luis.</p>
+      <form id="loginForm">
+        <label for="adminPassword">Clave de acceso</label>
+        <input id="adminPassword" name="password" type="password" maxlength="100" autocomplete="current-password" required autofocus>
+        <button type="submit" id="loginButton">Entrar</button>
+        <p class="status" id="loginStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="dashboard" id="dashboard" aria-labelledby="dashboardTitle" hidden>
+      <header class="dashboard-header">
+        <div>
+          <p class="eyebrow">Yunuen & Luis · 14.11.2026</p>
+          <h1 id="dashboardTitle">Lista de invitados</h1>
+          <p class="updated" id="updatedAt"></p>
+        </div>
+        <div class="header-actions">
+          <button class="secondary" type="button" id="refreshButton">Actualizar</button>
+          <button class="secondary" type="button" id="logoutButton">Cerrar sesión</button>
+        </div>
+      </header>
+
+      <div class="summary" aria-label="Resumen de confirmaciones">
+        <article><span>Asistentes</span><strong id="attendeeTotal">0</strong><small>personas confirmadas</small></article>
+        <article><span>Sí asistirán</span><strong id="yesTotal">0</strong><small>respuestas</small></article>
+        <article><span>No asistirán</span><strong id="noTotal">0</strong><small>respuestas</small></article>
+        <article><span>Total recibido</span><strong id="responseTotal">0</strong><small>confirmaciones</small></article>
+      </div>
+
+      <div class="toolbar">
+        <div class="filters" role="group" aria-label="Filtrar respuestas">
+          <button class="filter active" type="button" data-filter="all" aria-pressed="true">Todos</button>
+          <button class="filter" type="button" data-filter="si" aria-pressed="false">Sí van</button>
+          <button class="filter" type="button" data-filter="no" aria-pressed="false">No van</button>
+        </div>
+        <button class="download" type="button" id="downloadButton">Descargar lista CSV</button>
+      </div>
+
+      <p class="dashboard-status" id="dashboardStatus" role="status" aria-live="polite"></p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Respuesta</th><th>Nombres</th><th>Personas</th><th>Teléfono</th><th>Fecha</th><th>Mensaje</th></tr></thead>
+          <tbody id="rsvpRows"></tbody>
+        </table>
+        <p class="empty" id="emptyMessage" hidden>No hay confirmaciones en esta sección.</p>
+      </div>
+      <p class="deadline">Las nuevas confirmaciones se cerrarán automáticamente al finalizar el 25 de octubre de 2026.</p>
+    </section>
+  </main>
+</body>
+</html>

@@ -25,8 +25,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260817-2">
-  <script src="app.js?v=20260817-4" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260821-1">
+  <script src="app.js?v=20260821-1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Ir al contenido</a>
@@ -126,6 +126,7 @@
     <button class="dialog-close" id="closeRsvp" type="button" aria-label="Cerrar formulario">×</button>
     <img class="dialog-monogram" src="assets/monograma-yl-transparente.png" alt="Monograma de Yunuen y Luis" width="794" height="777">
     <p class="eyebrow ink">Nos encantará saber de ti</p><h2 id="dialogTitle">Confirmar asistencia</h2><p class="dialog-intro">Tu respuesta llegará directamente a Yunuen y Luis. Confirma a más tardar el 25 de octubre de 2026.</p>
+    <div class="form-status visible" id="rsvpClosedMessage" role="status" hidden>El periodo de confirmación terminó el 25 de octubre de 2026. Si necesitas hacer un cambio, comunícate directamente con Yunuen o Luis.</div>
     <form id="rsvpForm">
       <label for="attendance">¿Podrás acompañarnos?</label><select id="attendance" name="attendance" required><option value="si">Sí, asistiré</option><option value="no">No podré asistir</option></select>
       <label for="guestCount">Número de asistentes</label><input id="guestCount" name="guest_count" type="number" min="1" max="20" value="1" inputmode="numeric" required>
